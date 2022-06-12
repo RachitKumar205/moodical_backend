@@ -1,0 +1,4 @@
+Django~=4.0.5
+djangorestframework~=3.13.1
+keras~=2.9.0
+numpy~=1.22.4

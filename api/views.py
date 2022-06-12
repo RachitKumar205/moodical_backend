@@ -203,7 +203,7 @@ class MoodDetectViewSet(ViewSet):
             if image_data:
                 image_data = image_data.split(',')[1]
                 image_data = base64.b64decode(image_data)
-                file_name = "media/mood_image.jpg"
+                file_name = "mood_image.jpg"
                 with open(file_name, 'wb') as f:
                     f.write(image_data)
 
