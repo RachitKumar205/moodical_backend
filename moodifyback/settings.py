@@ -26,7 +26,7 @@ SECRET_KEY = '*s-a74xoex^fw%x*qls5#u!1rn=0n_z6c#y!@g)g)40p@($z*&'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = ['https://moodicalapi.azurewebsites.net/']
 
 # Application definition
 
