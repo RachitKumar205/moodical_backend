@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'moodifyback.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line
-        'NAME'    : 'moodical_db',                 # <-- UPDATED line
-        'USER'    : 'moodical',                     # <-- UPDATED line
-        'PASSWORD': 'm99d8cal@)@@',              # <-- UPDATED line
-        'HOST'    : 'moodicaldb.mysql.database.azure.com',                # <-- UPDATED line
-        'PORT'    : '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 

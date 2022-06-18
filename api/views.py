@@ -29,7 +29,7 @@ from moodifymodel.recog3 import class_labels, return_mood
 
 class MoodDetectViewSet(ViewSet):
 
-    BASE_URL = "http://localhost:8000"
+    BASE_URL = "https://moodicalapi.azurewebsites.net"
 
     def signup(self, request):
 
