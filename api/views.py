@@ -29,7 +29,7 @@ from moodifymodel.recog3 import class_labels, return_mood
 
 class MoodDetectViewSet(ViewSet):
 
-    BASE_URL = "https://moodicalapi.azurewebsites.net"
+    BASE_URL = "https://localhost:8000"
 
     def signup(self, request):
 
@@ -67,18 +67,13 @@ class MoodDetectViewSet(ViewSet):
             user = authenticate(
                 request, username=data.username, password=data.password)
 
-            if user != None:
+            token = Token.objects.filter(user=user).first()
 
-                token = Token.objects.filter(user=user).first()
+            if token:
 
-                if token:
-
-                    return Response({"result": "Success", "token": token.key, "username": token.user.username, "pk": user.pk}, status=status.HTTP_200_OK)
+                return Response({"result": "Success", "token": token.key, "username": token.user.username, "pk": user.pk}, status=status.HTTP_200_OK)
 
         except Exception as e:
-
-            print(e)
-
             return Response({"result": "Failure"}, status=status.HTTP_401_UNAUTHORIZED)
 
     def view_users(self, request):
