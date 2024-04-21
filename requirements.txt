@@ -71,7 +71,6 @@ spotipy==2.23.0
 sqlparse==0.4.4
 tensorboard==2.13.0
 tensorboard-data-server==0.7.1
-tensorflow==2.13.0
 tensorflow-estimator==2.13.0
 tensorflow-macos==2.13.0
 termcolor==2.3.0
