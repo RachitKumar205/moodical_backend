@@ -88,14 +88,7 @@ def movie(movie_name):
   print("Image:", content_image[9])
   image = content_image[9]
 
-  content_description = content_1.find("p", "sc-466bb6c-3 fOUpWp")
-  content_description = str(content_description.find("span"))
-  content_description = content_description.split(">")
-  content_description = content_description[-2].replace('"', '').replace("</span", "")
-  print("Description:", content_description)
-  desc = content_description
-
-  return {"link": url_title, "image": image, "description": desc}
+  return {"link": url_title, "image": image}
 
 
 movie("Mission Impossible")
